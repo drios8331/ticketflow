@@ -1,0 +1,7 @@
+{
+  "name": "ticketflow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
