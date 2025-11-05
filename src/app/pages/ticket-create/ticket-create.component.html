@@ -1,0 +1,24 @@
+<ion-content>
+<ion-header>
+<ion-toolbar>
+<ion-title>Crear Ticket</ion-title>
+</ion-toolbar>
+</ion-header>
+
+
+<form (ngSubmit)="submit()" style="padding:16px;">
+<ion-item>
+<ion-label position="stacked">Título</ion-label>
+<ion-input [(ngModel)]="model.title" name="title"></ion-input>
+</ion-item>
+
+
+<ion-item>
+<ion-label position="stacked">Descripción</ion-label>
+<ion-textarea [(ngModel)]="model.description" name="description"></ion-textarea>
+</ion-item>
+
+
+<ion-button expand="full" type="submit" [disabled]="saving">Crear</ion-button>
+</form>
+</ion-content>
