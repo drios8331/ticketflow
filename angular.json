@@ -41,7 +41,7 @@
               "src/theme/variables.scss"
             ],
             "scripts": [],
-            "baseHref": "./"
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
