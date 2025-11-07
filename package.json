@@ -3,15 +3,20 @@
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
+  "private": true,
+  "description": "An Ionic Angular project",
+
   "scripts": {
     "ng": "ng",
     "start": "ionic serve",
-    "build": "npx ionic build --prod",
+    "build": "ionic build",
+    "build:prod": "ionic build --prod",
     "watch": "ionic build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "vercel-build": "ionic build"
   },
-  "private": true,
+
   "dependencies": {
     "@angular/animations": "^20.0.0",
     "@angular/common": "^20.0.0",
@@ -33,6 +38,7 @@
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
+
   "devDependencies": {
     "@angular-devkit/build-angular": "^20.0.0",
     "@angular-eslint/builder": "^20.0.0",
@@ -60,6 +66,5 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.8.0"
-  },
-  "description": "An Ionic project"
+  }
 }
