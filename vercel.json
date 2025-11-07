@@ -1,9 +1,16 @@
 {
+  "version": 2,
+  "public": true,
   "builds": [
-    { "src": "package.json", "use": "@vercel/static-build" }
+    {
+      "src": "www/**/*",
+      "use": "@vercel/static"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "outputDirectory": "www"
+    {
+      "src": "/(.*)",
+      "dest": "/www/$1"
+    }
+  ]
 }
