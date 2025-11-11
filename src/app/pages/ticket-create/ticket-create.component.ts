@@ -13,7 +13,7 @@ templateUrl: './ticket-create.component.html',
 styleUrls: ['./ticket-create.component.scss']
 })
 export class TicketCreateComponent {
-model = { title: '', description: '' };
+model = { title: '', namePerson: '', description: '' };
 saving = false;
 
 
@@ -21,7 +21,7 @@ constructor(private ticketSvc: TicketService, private nav: NavController, privat
 
 
 async submit() {
-if (!this.model.title || !this.model.description) {
+if (!this.model.title || !this.model.namePerson || !this.model.description) {
 const t = await this.toastCtrl.create({ message: 'Título y descripción son obligatorios', duration: 2000 });
 await t.present();
 return;

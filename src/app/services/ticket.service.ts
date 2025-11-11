@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 export interface Ticket {
   _id?: string;
   title: string;
+  namePerson: string;
   description: string;
   createdAt?: string;
   status?: string;
@@ -20,7 +21,7 @@ export class TicketService {
     return this.http.get<Ticket[]>(this.api);
   }
 
-  create(payload: { title: string; description: string }): Observable<Ticket> {
+  create(payload: { title: string; namePerson: string; description: string }): Observable<Ticket> {
     return this.http.post<Ticket>(this.api, payload);
   }
 
